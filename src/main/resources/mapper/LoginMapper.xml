@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.szgwnet.discharge.dao.LoginDao" >
+ <select id="selVersions" resultType="com.szgwnet.discharge.model.AppInfo">
+    SELECT VERSION FROM GWN_PUB_APP WHERE APP_ID = 21
+ </select>
+    <select id="selectAppInfo" resultType="com.szgwnet.discharge.model.AppInfo">
+        select app_id,app_name,description,version,server_ip,app_location from GWN_PUB_APP where app_id != 4
+ </select>
+    <update id="editUser">
+        update GWN_PUB_USER
+                 set pwd=#{npwd}
+                where id=#{id}
+    </update>
+
+    <select id="selcetPwd" resultType="com.szgwnet.discharge.model.User">
+        select id from GWN_PUB_USER where id=#{user_id} and pwd=#{pwd}
+ </select>
+</mapper>

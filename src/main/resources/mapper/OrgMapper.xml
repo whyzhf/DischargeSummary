@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.szgwnet.discharge.dao.OrgDao" >
+ <select id="selUserOrgRel" resultType="com.szgwnet.discharge.model.Org">
+   select O.id as id,O.name as name from GWN_PUB_ORG O inner join GWN_PUB_USER_ORG_REL L on O.ID = L.ORG_ID where L.USER_ID = #{userId} ORDER BY O.DIS_ORDER
+ </select>
+</mapper>

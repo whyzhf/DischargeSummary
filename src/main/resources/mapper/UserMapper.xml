@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.szgwnet.discharge.dao.UserDao">
+  <select id="selectUser" resultType="com.szgwnet.discharge.model.User">
+    select ID,NAME,STATUS FROM GWN_PUB_USER where name=#{userName} and pwd = #{pwd}
+  </select>
+
+  <select id="selectUserParticulars" resultType="com.szgwnet.discharge.model.User">
+     select ID,NAME,PWD,STATUS FROM GWN_PUB_USER where ID = #{id}
+  </select>
+
+  <select id="getAppInfo" resultType="com.szgwnet.discharge.model.AppInfo">
+    SELECT APP_ID, APP_NAME, DESCRIPTION, VERSION, VERSION_DESC, app_logo, BG_IMG, SERVER_IP, APP_LOCATION, DIS_ORDER, STATUS
+    FROM GWN_PUB_APP
+    WHERE APP_ID=32 limit 1;
+  </select>
+</mapper>

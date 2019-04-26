@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.szgwnet.discharge.dao.SettingDao" >
+    <select id="selImgPathInfo" resultType="com.szgwnet.discharge.model.AppInfo">
+    select app_name,app_logo from GWN_PUB_APP where app_id = 21
+ </select>
+    <select id="selectXiao" resultType="com.szgwnet.discharge.model.AppInfo">
+       SELECT VERSION_DESC FROM GWN_PUB_APP WHERE APP_ID = 21
+ </select>
+</mapper>

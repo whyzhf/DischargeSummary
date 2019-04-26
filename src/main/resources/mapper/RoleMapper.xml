@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.szgwnet.discharge.dao.RoleDao">
+<select id="selUserRoleRel" resultType="com.szgwnet.discharge.model.Role">
+  select O.id as id,O.name as name from GWN_PUB_ROLE O inner join GWN_PUB_USER_ROLE_REL L on O.ID = L.ROLE_ID where L.USER_ID = #{userId} and APP_ID = 32 ORDER BY O.DIS_ORDER
+</select>
+</mapper>
