@@ -10,10 +10,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
- * 页面跳转控制器
- * @author 77
- * @date 2018-12-01 11:14
+   *页面跳转控制器
+   * @author why
+   * @date 2019/4/29
+   * @return
+   * @description  ${description}
  */
+
 @RestController
 @RequestMapping("/index")
 public class IndexController {
