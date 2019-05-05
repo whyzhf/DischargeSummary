@@ -1,6 +1,9 @@
 package com.szgwnet.discharge.model;
 
-public class AppInfo {
+import java.io.Serializable;
+
+public class AppInfo  {
+
     private int app_id;	//统一定义的应用ID
     private String app_name;	//统一定义的应用名称
     private String description;	//应用描述
