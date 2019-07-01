@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>登录</title>
+
+    <link rel="icon" type="image/png" th:href="@{/static/assert/imgs/favicon.png}">
+    <link rel="stylesheet" th:href="@{/static/assert/font/font-awesome-4.7.0/css/font-awesome.min.css}">
+    <link type="text/css" th:href="@{/static/css/login.d0de7c18a04044d394db.css}" rel="stylesheet">
+    <script type="text/javascript" th:src="@{/static/assert/js/md5.js}"></script>
+
+<!-- -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://localhost:8080/finemanage/static/assert/js/fine.client.login.js"></script>
+
+    <script th:inline="javascript">
+
+    window.getSession = (
+        function(){
+            const session = {
+                getPath:[[@{/}]],
+            };
+
+            return function(key){
+
+
+                return session[key]
+            }
+        }
+    )();
+
+
+</script>
+</head>
+<body >
+
+  <div id="app" class="page"></div>
+  <div id="modal_root"></div>
+
+
+  <div style="background: white;border: #0cf76a;position: fixed;top:0 ;" >
+      <input  id="userid" name="userid" maxlength="32" placeholder="用户名" style="" type="text" autocomplete="off"/>
+
+      <input  id="pwd" name="pwd" maxlength="32" placeholder="密码" type="password" autocomplete="off"/>
+      <span  class="login-button aws-login-font" id="loginBtn">登录</span>
+  </div>
+
+  <script type="text/javascript" th:src="@{/static/manifest.js}"></script>
+  <script type="text/javascript" th:src="@{/static/js/vendor.chunk.js}"></script>
+  <script type="text/javascript" th:src="@{/static/js/login.chunk.js}"></script>
+
+
+
+
+</body>
+</html>
